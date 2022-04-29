@@ -4,29 +4,22 @@ SK = int((input("預かった金額を入力してください[円]:")))
 #おつり
 Ot = SK - SN
 
-MA = Ot // 5000
 MB = Ot % 5000
-
-MC = MB // 1000
 MD = MB % 1000
-
-ME = MD // 500
 MF = MD % 500
-
-MG = MF // 100
 MH = MF % 100
-
-MI = MH // 50
 MJ = MH % 50
-
-MK = MJ //10
 ML = MJ % 10
-
-MM = ML // 5
 MN = ML % 5
 
+MA = Ot // 5000
+MC = MB // 1000
+ME = MD // 500
+MG = MF // 100
+MI = MH // 50
+MK = MJ // 10
+MM = ML // 5
 MO = MN // 1
-#MP = MN % 1
 
 
 Tx = ["おつりは","5000円札は","1000円札は","500円玉は","100円玉は","50円玉は"

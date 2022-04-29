@@ -1,3 +1,3 @@
-print("私の学籍番号はc2p31087")
-print("私の名前は濱口椋大")
+print("私の学籍番号はxxxxxxxx")
+print("私の名前はxxxx")
 print("神奈川県から来ました")
