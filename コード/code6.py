@@ -13,5 +13,3 @@ print(Tx[0],P,"です。")
 print(Tx[1],abs(M),"です。")
 print(Tx[2],K,"です。")
 print(Tx[3],W,"で",Tx[4],W2,"です。")
-
-
