@@ -2,6 +2,7 @@ names = []
 kents = []
 ages = []
 num = ['1', '2', '3', '4']
+mt = []
 for i in range(4):
     Nm = input(num[i]+'人目の名前を入力しましょう。\n')
     names.append(Nm)
@@ -23,8 +24,12 @@ else:
     print("入力された出身地集合",cov2)
     print("入力された年齢集合",cov3)
 
-keag = zip(kents,ages)    
-all_list = dict(zip(names,keag))
-print(all_list)
-
-    
+nf = [names[0],[kents[0],ages[0]]]
+ns = [names[1],[kents[1],ages[1]]]
+nt = [names[2],[kents[2],ages[2]]]
+nq = [names[3],[kents[3],ages[3]]]
+mt.append(nf)
+mt.append(ns)
+mt.append(nt)
+mt.append(nq)
+print(mt)

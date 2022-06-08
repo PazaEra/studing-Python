@@ -11,12 +11,3 @@ for i in range(2, s):
 
 print(' ')
 print('100までの素数は',len(F),'個です。')
-
-
-
-#sample
-#for i in range(1, 10):
-#    if i == 5;
-#    break
-#else:
-#    print("処理")
