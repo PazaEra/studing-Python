@@ -81,3 +81,8 @@ print(am[5][0],"の書いた文章数は",A5)
 print("削除候補は",am[1])
 del am[0]
 print(am)
+
+with open('dataset03.tsv', 'w',encoding='UTF-8',newline='') as f:
+           writer = csv.writer(f, delimiter = "\t")
+           writer.writerows(write_data)
+           print("ファイルを書き込みました。")
