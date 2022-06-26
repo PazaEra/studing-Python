@@ -14,4 +14,3 @@ write = create_ave_sum(Math, Eng, Jap)
 ER = round(write[1],1)
 
 print(f'全教科の点数は{write[0]}, 平均点は{ER}')
-

@@ -1,3 +1,5 @@
+import math
+
 all_data = []
 latest_data = []
 update_data = []
@@ -11,6 +13,7 @@ Math = []
 Eng = []
 Jap = []
 sjave = []
+kt = []
 
 with open('file10-1.csv', 'r',encoding='UTF-8',newline='') as f:
     file_data = f.readlines()
@@ -122,14 +125,46 @@ sjave.append(Jv)
 for i in range(10):
     print(f'{ctuj[i]}人目の全教科の合計点は{AC[i]},平均点は{AR[i]}です')  
 
-#all_ave = (intMath + intEng + intJap) / 3
-#def create_ave(mt,eg,jp):
-#    if n != 0:
-#        return (mt + mt_data[i]) / 10
-#        return (eg + eg_data[i]) / 10
-#        return (jp + jp_data[i]) / 10
-#    return 1
-#create_ave()
-
 for i in range(3):
     print(f'{subj[i]}の10人分の平均点は{sjave[i]}です')
+
+# 実際の平均点
+#ave = np.average(data)
+ 
+# 実際の標準偏差
+#std = np.std(Math)
+
+def create_standard_score(score, ave, std):
+    return int((score - ave) / std * 10 + 50)
+
+#print(std)
+
+m1 = sum(Math) / len(Math)
+v1 = sum((l-m1)**2 for l in Math) / len(Math)
+s1 = math.sqrt(v1)
+kt.append(round(s1,1))
+
+m2 = sum(Eng) / len(Eng)
+v2 = sum((l-m2)**2 for l in Eng) / len(Eng)
+s2 = math.sqrt(v2)
+kt.append(round(s2,1))
+
+m3 = sum(Jap) / len(Jap)
+v3 = sum((l-m3)**2 for l in Jap) / len(Jap)
+s3 = math.sqrt(v3)
+kt.append(round(s3,1))
+
+MCSS = []
+ECSS = []
+JCSS = []
+
+for i in range(10):
+    MCSS.append(create_standard_score(Math[i],Ma,kt[0]))
+    ECSS.append(create_standard_score(Eng[i],Ea,kt[1]))
+    JCSS.append(create_standard_score(Jap[i],Jv,kt[2]))
+
+
+for i in range(10):
+    print(f'{ctuj[i]}人目の数学の偏差値は{MCSS[i]},英語の偏差値は{ECSS[i]},国語の偏差値は{JCSS[i]}です')
+
+

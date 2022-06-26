@@ -76,6 +76,5 @@ AR.append(R8)
 AR.append(R9)
 AR.append(R10)
 
-
 for i in range(10):
     print(f'{ctuj[i]}人目の全教科の合計点は{AC[i]},平均点は{AR[i]}です')  
