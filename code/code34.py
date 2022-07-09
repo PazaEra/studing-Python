@@ -1,14 +1,14 @@
-from code33_c2p31087 import create_subject_list 
-from code33_c2p31087 import search_class_match_word
-from code33_c2p31087 import search_subject_include_word
+from code33 import create_subject_list 
+from code33 import search_class_match_word
+from code33 import search_subject_include_word
 import unicodedata
 import requests
 
 als = []
 if __name__ == '__main__':
-    url_1 = 'https://www.bunkyo.ac.jp/faculty/fac-info/information-systems/curriculum.html'
-    url_2 = 'https://www.bunkyo.ac.jp/faculty/fac-info/information-society/curriculum.html'
-    url_3 = 'https://www.bunkyo.ac.jp/faculty/fac-info/media-and-communication/curriculum.html'
+    url_1 = '.html'
+    url_2 = '.html'
+    url_3 = '.html'
 listSys = create_subject_list(requests.get(url_1))
 listSoc = create_subject_list(requests.get(url_2))
 listMed = create_subject_list(requests.get(url_3))
@@ -34,4 +34,3 @@ if fs == 1:
     ct2 = len(wor_list)
     for i in range(ct2):
         print(f'領域：{wor_list[i][0]},科目：{wor_list[i][1]}')
-
