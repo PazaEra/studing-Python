@@ -24,27 +24,25 @@ class Competition:
 
     def show_charactor_list(self): #キャラリストの最終結果
         print('【参加者の一覧リスト】')
-        for charactor in self.listcharactor:
-            print(self.listcharactor)
-
+        for ch in self:
+            print(ch)
+#        for charactor in self.listcharactor:
+#            print(charactor[1])
+GList = []
 if __name__ == '__main__':
     competition = Competition()
 
     with open('CharactorList.csv','r', encoding='UTF-8') as file:
         reader = next(csv.reader(file))
         reader = csv.reader(file)
-        #l = [row for row in reader]
         for strList in reader:
-            intId = Charactor.id
-            strName = Charactor.name
-            intPower = Charactor.power
-            intWiz = Charactor.wiz
-            intSta = Charactor.sta
-            #キャラクタクラスのインスタンスを作成
-            Charactor = competition.show_charactor_list(self.name)
-        # 競技大会のインスタンスにIDが偶数番号のキャラクタのインスタンスを登録
-        if Charactor.id % 2 == 0:
-            competition.show_charactor_list(strName)
-    
+            intId = int(strList[0])
+            strName = strList[1]
+            intPower = int(strList[2])
+            intWiz = int(strList[3])
+            intSta = int(strList[4])
+            Charactor = Competition.show_charactor_list
+            if intId % 2 == 0:
+                GList.append(strName)
 
-    competition.show_charactor_list()
+Competition.show_charactor_list(GList)
